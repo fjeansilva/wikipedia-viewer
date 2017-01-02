@@ -1,45 +1,32 @@
 <!doctype html>
 <html>
-<head>
-  <title>Wikipedia Viewer</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <main role="main" class="main">
-    <section class="search-form start-position">
-      <h1 class="title">Wikipedia Viewer</h2>
-      <input class="search" type="text" placeholder="Search your term here">
-      <button class="btn btn-search">Search</button>
-      <button class="btn btn-random">Random</button>
-    </section>
-
-    <section class="search-result-total" hidden>
-      <strong><em>Show first 15 results</em></strong>
-    </section>
-
-    <section class="search-result"></section>
-  </main>
-
-  <div class="ui active dimmer searching hide" hidden>
-    <div class="ui massive text loader">Searching...</div>
-  </div>
-
-  <article class="template" hidden>
-    <a href="#" class="urlPage" target="_blank">
-      <div class="col-md-12 col-sm-12">
-        <div class="media">
-          <div class="media-left">
-            <img class="media-object" src="" width="60">
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading"></h4>
-            <p class="description"><p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <script src="js/app.js"></script>
-</body>
+  <head>
+    <title>Wikipedia Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main role="main" class="main">
+      <section class="search-form start-position">
+        <h1 class="title">Wikipedia Viewer</h2>
+        <input class="search" type="text" placeholder="Search your term here">
+        <button class="btn btn-search">Search</button>
+        <button class="btn btn-random">Random</button>
+      </section>
+      <section class="search-result-total" hidden>
+        <strong><em>Show first 15 results</em></strong>
+      </section>
+      <section class="search-result"></section>
+    </main>
+    <div class="ui active dimmer searching hide" hidden>
+      <div class="ui massive text loader">Searching...</div>
+    </div>
+    <article class="template" hidden>
+      <a href="#" class="template-url" target="_blank">
+        <h4 class="template-title"></h4>
+      </a>
+      <p class="template-description"><p>
+    </article>
+    <script src="js/app.js"></script>
+  </body>
 </html>

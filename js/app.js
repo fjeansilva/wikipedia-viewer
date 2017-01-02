@@ -61,11 +61,11 @@
 
   app.createTemplate = function(item) {
     let row = app.rowTemplate.cloneNode(true);
-    row.classList.remove('rowTemplate');
+    row.classList.remove('template');
     row.removeAttribute('hidden');
-    row.querySelector('.media-heading').textContent = item.title;
-    row.querySelector('.urlPage').setAttribute('href', `https://en.wikipedia.org/?curid=${item.pageid}`);
-    row.querySelector('.description').textContent = item.extract.slice(0, 170).concat('...');
+    row.querySelector('.template-title').textContent = item.title;
+    row.querySelector('.template-url').setAttribute('href', `https://en.wikipedia.org/?curid=${item.pageid}`);
+    row.querySelector('.template-description').textContent = item.extract.slice(0, 170).concat('...');
     app.containerResults.appendChild(row);
   };
 
