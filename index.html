@@ -1,57 +1,45 @@
 <!doctype html>
 <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    <div class="container container-search middle">
-      <div class="row">
-        <div class="col-md-12 col-sm-12">
-          <div class="form-group form-group-lg">
-            <div class="col-md-offset-3 col-sm-offset-3 col-sm-6 col-md-6">
-              <h1 class="text-center">Wikipedia Viewer</h2>
-                <input class="form-control" type="text" id="search" placeholder="Search your term here" style="margin: 30px;">
+<head>
+  <title>Wikipedia Viewer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main role="main" class="main">
+    <section class="search-form start-position">
+      <h1 class="title">Wikipedia Viewer</h2>
+      <input class="search" type="text" placeholder="Search your term here">
+      <button class="btn btn-search">Search</button>
+      <button class="btn btn-random">Random</button>
+    </section>
 
-              </div>
-            </div>
+    <section class="search-result-total" hidden>
+      <strong><em>Show first 15 results</em></strong>
+    </section>
+
+    <section class="search-result"></section>
+  </main>
+
+  <div class="ui active dimmer searching hide" hidden>
+    <div class="ui massive text loader">Searching...</div>
+  </div>
+
+  <article class="template" hidden>
+    <a href="#" class="urlPage" target="_blank">
+      <div class="col-md-12 col-sm-12">
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object" src="" width="60">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"></h4>
+            <p class="description"><p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 col-sm-12 text-center">
-            <a id="btnSearch" class="btn btn-default" href="#" role="button">Search</a>
-            <a id="btnRandom" class="btn btn-default" href="https://en.wikipedia.org/wiki/Special:Random" role="button" target="_blank">Random</a>
-          </div>
-        </div>
       </div>
-
-      <div class="container container-total" style="margin-top: 20px;" hidden>
-        <div class="row">
-          <div class="col-md-4 col-sm-4">
-            <strong>Show first 15 results</strong>
-          </div>
-        </div>
-      </div>
-      <div class="container container-results">
-      </div>
-
-      <div class="ui active dimmer searching hide">
-        <div class="ui massive text loader">Searching...</div>
-      </div>
-      <div class="row rowTemplate" style="margin: 20px; border: 2px solid #DDD; padding: 7px; border-radius: 6px;" hidden>
-        <a href="#" class="urlPage" target="_blank">
-          <div class="col-md-12 col-sm-12">
-            <div class="media">
-              <div class="media-left">
-
-                <img class="media-object" src="https://en.wikipedia.org/static/images/project-logos/enwiki.png" width="60">
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">Metallica discography</h4>
-                <p class="description">The following is the discography of Metallica, a San Francisco-based heavy metal band formed in 1981 by James Hetfield (lead vocals, rhythm guitar) and Lars Ulrich (drums).<p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-  </body>
+    </a>
+  </article>
+  <script src="js/app.js"></script>
+</body>
 </html>

@@ -4,19 +4,23 @@
     searching: false,
     totalResults: 0,
     spinner: document.querySelector('.searching'),
-    rowTemplate: document.querySelector('.rowTemplate'),
-    containerSearch: document.querySelector('.container-search'),
-    searchField: document.getElementById('search'),
-    containerResults: document.querySelector('.container-results')
+    rowTemplate: document.querySelector('.template'),
+    containerSearch: document.querySelector('.search-form'),
+    searchField: document.querySelector('.search'),
+    containerResults: document.querySelector('.search-result')
   };
 
-  document.getElementById('btnSearch').addEventListener('click', function(){
+  document.querySelector('.btn-search').addEventListener('click', function(){
     if (app.searchField.value == '') {
-      app.searchField.setAttribute('placeholder', 'Type your term :) for search');
+      app.searchField.setAttribute('placeholder', 'Type your term for search :)');
     } else {
-      app.containerSearch.classList.remove('middle');
+      app.containerSearch.classList.remove('start-position');
       app.search();
     }
+  });
+
+  document.querySelector('.btn-random').addEventListener('click', function(){
+    window.open('https://en.wikipedia.org/wiki/Special:Random', '_blank');
   });
 
   app.search = function(){
@@ -48,7 +52,7 @@
         app.createTemplate(itens.query.pages[item]);
       }
     }
-    document.querySelector('.container-total').removeAttribute('hidden');
+    document.querySelector('.search-result-total').removeAttribute('hidden');
   };
 
   app.clear = function() {
